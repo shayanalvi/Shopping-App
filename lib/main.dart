@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping/pages/login_page.dart';
 import 'pages/home_page.dart';
-import 'package:google_fonts/google_fonts.dart';
 
     void main() {
   runApp(MyApp());
@@ -18,7 +17,6 @@ import 'package:google_fonts/google_fonts.dart';
           themeMode: ThemeMode.light,
           theme: ThemeData(
             primarySwatch: Colors.deepPurple,
-            primaryTextTheme: GoogleFonts.latoTextTheme(),
           ),
           darkTheme: ThemeData(
             brightness: Brightness.dark,
