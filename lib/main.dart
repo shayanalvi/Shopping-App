@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:shopping/pages/login_page.dart';
+import 'package:shopping/utils/routes.dart';
 import 'pages/home_page.dart';
 
     void main() {
@@ -18,12 +19,14 @@ import 'pages/home_page.dart';
           theme: ThemeData(
             primarySwatch: Colors.deepPurple,
           ),
+          debugShowCheckedModeBanner: false,
           darkTheme: ThemeData(
             brightness: Brightness.dark,
           ),
           routes: {
             "/" : (context)=> LoginPage(),
-            "/home" :(context)=> HomePage(),
+            MyRoutes.homeRoute :(context)=> HomePage(),
+            MyRoutes.loginRoute :(context)=> LoginPage(),
           },
         );
       }
