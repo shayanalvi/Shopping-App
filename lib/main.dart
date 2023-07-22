@@ -23,6 +23,7 @@ import 'pages/home_page.dart';
           darkTheme: ThemeData(
             brightness: Brightness.dark,
           ),
+          initialRoute: MyRoutes.homeRoute,
           routes: {
             "/" : (context)=> LoginPage(),
             MyRoutes.homeRoute :(context)=> HomePage(),

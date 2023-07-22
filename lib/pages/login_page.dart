@@ -1,12 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
-
-
 import 'package:flutter/material.dart';
 import 'package:shopping/utils/routes.dart';
 
 class LoginPage extends StatefulWidget {
-
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -39,20 +36,26 @@ class _LoginPageState extends State<LoginPage> {
             key: _formKey,
             child: Column(
               children: [
-                Image.asset("assets/images/un_login.png", fit: BoxFit.cover,),
+                Image.asset(
+                  "assets/images/un_login.png",
+                  fit: BoxFit.cover,
+                ),
                 SizedBox(
                   height: 20.0,
                 ),
-                Text("Welcome $name", style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                ),),
+                Text(
+                  "Welcome $name",
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 SizedBox(
                   height: 20.0,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 16, horizontal: 32),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
                   child: Column(
                     children: [
                       TextFormField(
@@ -60,8 +63,8 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: "enter username",
                           labelText: "Username",
                         ),
-                        validator:(value) {
-                          if(value!.isEmpty){
+                        validator: (value) {
+                          if (value!.isEmpty) {
                             return "Username cannot be empty";
                           }
 
@@ -78,10 +81,10 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: "enter password",
                           labelText: "Password",
                         ),
-                        validator:(value) {
-                          if(value!.isEmpty){
+                        validator: (value) {
+                          if (value!.isEmpty) {
                             return "Password cannot be empty";
-                          } else if(value.length<8) {
+                          } else if (value.length < 8) {
                             return "password length should be atleast 6";
                           }
 
@@ -93,27 +96,25 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       Material(
                         color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(
-                            changeButton ? 20 : 8),
+                        borderRadius:
+                            BorderRadius.circular(changeButton ? 20 : 8),
                         child: InkWell(
                           onTap: () => moveToHome(context),
                           child: AnimatedContainer(
                             width: changeButton ? 50 : 150,
                             height: 50,
-
                             alignment: Alignment.center,
                             duration: Duration(seconds: 2),
-                            child:
-                            changeButton ? Icon(Icons.done,
-                                color: Colors.white) :
-                            Text("Login", style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
-                            ),
-
-
+                            child: changeButton
+                                ? Icon(Icons.done, color: Colors.white)
+                                : Text(
+                                    "Login",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                    ),
+                                  ),
                           ),
                         ),
                       ),
@@ -123,7 +124,6 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
           ),
-        )
-    );
+        ));
   }
 }
