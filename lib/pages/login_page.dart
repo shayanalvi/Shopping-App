@@ -102,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                             height: 50,
 
                             alignment: Alignment.center,
-                            duration: Duration(seconds: 1),
+                            duration: Duration(seconds: 2),
                             child:
                             changeButton ? Icon(Icons.done,
                                 color: Colors.white) :
